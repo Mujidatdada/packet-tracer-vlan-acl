@@ -15,9 +15,8 @@ This project was created as part of my AltSchool exam to demonstrate core networ
 
 To segment the network, three VLANs were created:
 
-- **VLAN 10** – Admin
-- **VLAN 20** – HR
-- **VLAN 30** – Finance
+- **VLAN 10** – HR
+- **VLAN 20** – Finance
 
 ### Sub-interface Configuration
 
@@ -35,12 +34,8 @@ Router(config-subif)# encapsulation dot1Q 20
 Router(config-subif)# ip address 192.168.20.1 255.255.255.0
 Router(config-subif)# exit
 
-Router(config)# interface GigabitEthernet 0/0.30
-Router(config-subif)# encapsulation dot1Q 30
-Router(config-subif)# ip address 192.168.30.1 255.255.255.0
-Router(config-subif)# exit
-✅ After configuring the sub-interfaces, Inter-VLAN communication became possible.
-
+**After configuring the sub-interfaces, Inter-VLAN communication became possible.
+**
 2. ACL Implementation for Security
 To restrict traffic between VLANs, I applied a standard access control policy:
 
